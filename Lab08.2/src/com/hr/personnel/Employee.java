@@ -40,6 +40,10 @@ public class Employee {
         System.out.println(getName() + " working hard since " + getHireDate());
     }
 
+    public void pay(){
+        System.out.printf("%s gets paid ...somehow...\n", getName());
+    }
+
     // accessor methods
     public String getName() {
         return name;
@@ -59,6 +63,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: name=" + getName() + ", hireDate=" + getHireDate();
+        return getClass().getSimpleName() + ": " + getName() + ", hireDate=" + getHireDate();
     }
 }
