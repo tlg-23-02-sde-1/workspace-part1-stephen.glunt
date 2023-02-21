@@ -14,6 +14,10 @@ public class SalariedEmployee extends Employee {
         setSalary(salary);
     }
 
+    public void takeVacation(){
+        System.out.printf("%s is going on vacation.\n", getName());
+    }
+
     @Override
     public void pay(){
         System.out.printf("%s is paid salary $%,.2f.\n", getName(), getSalary());

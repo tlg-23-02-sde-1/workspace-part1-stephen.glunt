@@ -53,6 +53,17 @@ public class Department {
         }
     }
 
+    /**
+     * "Forced vacation" for all employees that take vacation.
+     */
+    public void holidayBreak(){
+        for(int i = 0; i < currentIndex; i++) {
+            if(employees[i] instanceof SalariedEmployee){
+                ((SalariedEmployee) employees[i]).takeVacation();
+            }
+        }
+    }
+
     public void payEmployees(){
         for (int i = 0; i < currentIndex; i++){
             employees[i].pay();
