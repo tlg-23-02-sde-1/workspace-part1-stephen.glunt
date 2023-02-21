@@ -11,7 +11,7 @@ public class SalariedEmployee extends Employee {
 
     public SalariedEmployee(String name, LocalDate hireDate, double salary) {
         this(name, hireDate);
-        this.salary = salary;
+        setSalary(salary);
     }
 
     @Override

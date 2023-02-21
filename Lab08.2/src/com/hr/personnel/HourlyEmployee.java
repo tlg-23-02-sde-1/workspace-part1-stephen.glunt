@@ -8,12 +8,14 @@ public class HourlyEmployee extends Employee{
 
     public HourlyEmployee(String name, LocalDate hireDate){
         super(name, hireDate);
+//        this.setName(name);
+//        this.setHireDate(hireDate);
     }
 
     public HourlyEmployee(String name, LocalDate hireDate, double rate, double hours) {
         this(name, hireDate);
-        this.rate = rate;
-        this.hours = hours;
+        setRate(rate);
+        setHours(hours);
     }
 
     @Override
