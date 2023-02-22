@@ -49,6 +49,11 @@ public class SalariedEmployee extends Employee {
     }
 
     @Override
+    public void fileReturn(){
+        System.out.println("Return filed electronically.");
+    }
+
+    @Override
     public void payTaxes() {
         System.out.printf("%s, %s, paid $%,.2f in taxes.\n", getName(), getClass().getSimpleName(), getSalary() * SALARIED_TAX_RATE);
     }

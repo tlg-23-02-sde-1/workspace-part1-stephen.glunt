@@ -50,6 +50,6 @@ public class HourlyEmployee extends Employee{
 
     @Override
     public void payTaxes() {
-        System.out.printf("%s payed $%,.2f in taxes.\n", getName(), getRate() * getHours() * HOURLY_TAX_RATE);
+        System.out.printf("%s, %s, payed $%,.2f in taxes.\n", getName(), getClass().getSimpleName(), getRate() * getHours() * HOURLY_TAX_RATE);
     }
 }

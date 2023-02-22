@@ -30,10 +30,11 @@ class TaxClient {
 //        irs.register(corp, hrly1, slry1);
 
         Employee[] employees = new Employee[20];
-        for(int i = 0; i < employees.length - 1; i++){
+        for(int i = 0; i < employees.length; i++){
             employees[i] = SalariedEmployee.genEmployee();
+            i++;
+            employees[i] = new HourlyEmployee("Jason" + i,  LocalDate.of(1990, 8, i), 22.5, 5.0 * i);
         }
-        employees[19] = new HourlyEmployee("Jason",  LocalDate.of(1990, 8, 24), 22.5, 40.0);
         irs.register(corp, employees);
 
         // create Employees (Hourly or Salaried), and register them with the IRS
