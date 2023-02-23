@@ -26,6 +26,11 @@ public class Corporation implements TaxPayer {
     }
 
     @Override
+    public double getStandardDeduction(){
+        return 1_000_000.0;
+    }
+
+    @Override
     public void fileReturn(){
         System.out.println("Return not filed - we sent our lawyers instead.");
     }
