@@ -8,8 +8,10 @@
 
 package com.poetry.io;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class PoemClient {
 
@@ -17,8 +19,8 @@ public class PoemClient {
      * To run one method at a time, uncomment the call to the one you want to execute.
      */
     public static void main(String[] args) {
-        // readPoem();
-        // writePoem();
+         readPoem();
+         writePoem();
     }
 
     /**
@@ -35,10 +37,10 @@ public class PoemClient {
      */
     private static void readPoem() {
         // TODO: initialize 'reader' variable and complete the try block
-        try (BufferedReader reader = null) {
-
-        }
-        catch (IOException e) {
+        try {
+            String poem = Files.readString(Path.of("famous-poem.txt"));
+            System.out.println(poem);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -56,5 +58,24 @@ public class PoemClient {
      */
     private static void writePoem() {
         // TODO
+
+            String poem = "Misfortune in life\n" +
+                    "can rob you of everything.\n" +
+                    "Still, all is not lost.";
+            try {
+                Files.writeString(Path.of("haikus.txt"), poem);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+     /*   try (PrintWriter writer = new PrintWriter(new FileWriter("haiku.txt"))){
+            writer.println("Misfortune in life");
+            writer.println("can rob you of everything.");
+            writer.println("Still, all is not lost.");
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }*/
     }
 }
