@@ -8,6 +8,8 @@
 
 package gov.irs;
 
+import java.time.temporal.TemporalAccessor;
+
 /**
  * An argument can be made that the tax rate constants are better defined
  * on the classes that use them, and not all lumped in here.
@@ -20,6 +22,8 @@ public interface TaxPayer {
     public static final double HOURLY_TAX_RATE = 0.25;
     public static final double SALARIED_TAX_RATE = 0.30;
     public static final double DEFAULT_STANDARD_DEDUCTION = 7500.0;
+
+
 
     public void payTaxes();
 

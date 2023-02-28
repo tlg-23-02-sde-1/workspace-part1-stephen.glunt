@@ -10,6 +10,13 @@ import java.util.Scanner;
 
 class TelevisionCLI {
     public static void main(String[] args) {
+        Television myTv = getTelevisionFromUserInput();
+
+        System.out.println("Thank you for your order!");
+        System.out.println("Your custom television has the following specs:");
+        System.out.println(myTv);
+    }
+    private static Television getTelevisionFromUserInput(){
         String brand = null;
         Television myTv = null;
 
@@ -50,9 +57,6 @@ class TelevisionCLI {
                 //msg.printStackTrace();
             }
         }
-
-        System.out.println("Thank you for your order!");
-        System.out.println("Your custom television has the following specs:");
-        System.out.println(myTv);
+        return  myTv;
     }
 }
